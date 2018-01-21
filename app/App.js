@@ -7,7 +7,8 @@
 //1.加载React,Componet组件
 import React, { Component } from 'react';
 import TabNavigator from 'react-native-tab-navigator';
-
+import Images from './resource/Images';
+import Home from './main/home/Home'
 //2.加载原生组件
 import {
     Platform,
@@ -48,13 +49,13 @@ export default class App extends Component<{}> {
                 //选中样式
                 selectedTitleStyle={styles.selectedTabText}
                 //图标
-                renderIcon={()=> <Image style={styles.icon} source={require('./resource/image/tab_use.png')}></Image>}
+                renderIcon={()=> <Image style={styles.icon} source={Images.tab.tab_use}></Image>}
                 //选中图标
-                renderSelectedIcon={()=> <Image style={styles.icon} source={require('./resource/image/tab_use_pre.png')}></Image>}
+                renderSelectedIcon={()=> <Image style={styles.icon} source={Images.tab.tab_use_pre}></Image>}
                 //点击事件
                 onPress={()=>this.setState({selectedTab:'Event'})}>
               <View style={styles.page0}>
-                {/*<ScrollView2/>*/}
+                {<Home/>}
               </View>
             </TabNavigator.Item>
             <TabNavigator.Item
@@ -67,9 +68,9 @@ export default class App extends Component<{}> {
                 //选中样式
                 selectedTitleStyle={styles.selectedTabText}
                 //图标
-                renderIcon={()=> <Image style={styles.icon} source={require('./resource/image/tab_mine.png')}></Image>}
+                renderIcon={()=> <Image style={styles.icon} source={Images.tab.tab_mine}></Image>}
                 //选中图标
-                renderSelectedIcon={()=> <Image style={styles.icon} source={require('./resource/image/tab_mine_pre.png')}></Image>}
+                renderSelectedIcon={()=> <Image style={styles.icon} source={Images.tab.tab_mine_pre}></Image>}
                 //点击事件
                 onPress={()=>this.setState({selectedTab:'Log'})}>
               <View style={styles.page1}>

@@ -7,7 +7,17 @@ import {
 
 const {width, height} = Dimensions.get('window')
 module.exports = {
-    backgroundColor: '#f2f2f2',
+    //屏幕宽
     screen_width: width,
+    //屏幕高
     screen_height: height,
+
+
+    //背景色
+    backgroundColor: '#f2f2f2',
+
+    /**
+     *  文字相关
+     */
+
 }

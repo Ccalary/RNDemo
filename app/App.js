@@ -8,7 +8,8 @@
 import React, { Component } from 'react';
 import TabNavigator from 'react-native-tab-navigator';
 import Images from './resource/Images';
-import Home from './main/home/Home'
+import Home from './main/home/Home';
+import Mine from './main/mine/Mine'
 //2.加载原生组件
 import {
     Platform,
@@ -54,9 +55,7 @@ export default class App extends Component<{}> {
                 renderSelectedIcon={()=> <Image style={styles.icon} source={Images.tab.tab_use_pre}></Image>}
                 //点击事件
                 onPress={()=>this.setState({selectedTab:'Event'})}>
-              <View style={styles.page0}>
-                {<Home/>}
-              </View>
+                <Home/>
             </TabNavigator.Item>
             <TabNavigator.Item
                 //设置选中的位置
@@ -73,9 +72,7 @@ export default class App extends Component<{}> {
                 renderSelectedIcon={()=> <Image style={styles.icon} source={Images.tab.tab_mine_pre}></Image>}
                 //点击事件
                 onPress={()=>this.setState({selectedTab:'Log'})}>
-              <View style={styles.page1}>
-                {/*<ScrollViewTest/>*/}
-              </View>
+                <Mine></Mine>
             </TabNavigator.Item>
 
           </TabNavigator>
@@ -101,15 +98,5 @@ const styles = StyleSheet.create({
     icon:{
         width:22,
         height:22
-    },
-    page0:{
-        flex:1,
-        justifyContent:'center',
-        backgroundColor:'yellow'
-    },
-    page1:{
-        flex:1,
-        justifyContent:'center',
-        backgroundColor:'green'
     }
 });

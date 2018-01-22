@@ -9,11 +9,12 @@ import {
     View
 } from 'react-native';
 
+
 export default class Home extends Component {
 
     render(){
         return(
-           <View>
+           <View style={styles.container}>
                <Text>你好啊，我是界面1</Text>
            </View>
         )
@@ -22,5 +23,11 @@ export default class Home extends Component {
 
 //创建样式表
 const styles = StyleSheet.create({
+
+    container:{
+        flex: 1,
+        backgroundColor: 'yellow',
+        justifyContent: 'center'
+    }
 
 });

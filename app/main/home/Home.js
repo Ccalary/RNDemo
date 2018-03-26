@@ -3,6 +3,7 @@
  */
 
 import React, { Component } from 'react';
+import WeatherApi from '../../public/net/WeatherApi';
 import {
     StyleSheet,
     Text,
@@ -11,6 +12,10 @@ import {
 
 
 export default class Home extends Component {
+
+    componentDidMount(){
+        WeatherApi.requestWeather();
+    }
 
     render(){
         return(
